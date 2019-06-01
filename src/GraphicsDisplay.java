@@ -1,7 +1,7 @@
 import javafx.application.Application;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
-import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Ellipse;
@@ -12,7 +12,7 @@ import javafx.stage.Stage;
 
 public class GraphicsDisplay extends Application
 {
-	HBox root;
+	VBox root;
 	Scene scene;
 	
 	@Override
@@ -23,7 +23,7 @@ public class GraphicsDisplay extends Application
 		Line line = drawLine(primaryStage, 0, 0, 50, 50, 2, new Color(0.1, 0.6, 0.1, 1));
 		Rectangle rect = drawRect(primaryStage, 50, 50, 20, 30, 2, new Color(0.5, 0.4, 0.6, 1));
 		Circle circle = drawCircle(primaryStage, 50, 50, 20, 2, new Color(0.8, 0.6, 0.2, 1));
-		Ellipse ellipse = drawEllipse(primaryStage, 50, 50, 30, 15, 2, new Color(0.1, 0.2, 0.44, 1));
+		Ellipse ellipse = drawEllipse(primaryStage, 50, 50, 30, 15, 2, new Color(0.2, 0.3, 0.6, 1));
 		
 		addShape(line);
 		addShape(rect);
@@ -68,7 +68,7 @@ public class GraphicsDisplay extends Application
 	
 	public void createScene(Stage stage, int x, int y)
 	{
-		root = new HBox();
+		root = new VBox();
 		root.setAlignment(Pos.CENTER);
         
         scene = new Scene(root, x, y);
